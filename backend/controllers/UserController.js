@@ -82,12 +82,12 @@ exports.Login = async (req, res) => {
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     console.log(decoded);
-
     res
       .cookie('token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'None'
+        ...(process.env.NODE_ENV === 'production' ? { sameSite: 'None' } : {}),
+        path: '/'
       })
       .status(200)
       .json({
@@ -103,10 +103,15 @@ exports.Login = async (req, res) => {
 //LOGOUT
 
 exports.Logout = async (req, res) => {
-  res.clearCookie('token').status(200).json({
-    status: 'success',
-    message: 'Logged out successfully'
-  });
+  res
+    .clearCookie('token', {
+      path: '/'
+    })
+    .status(200)
+    .json({
+      status: 'success',
+      message: 'Logged out successfully'
+    });
 };
 
 //CHECK AUTH
@@ -297,7 +302,10 @@ exports.UpdateUser = async (req, res) => {
         .cookie('token', newToken, {
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production',
-          sameSite: 'None'
+          ...(process.env.NODE_ENV === 'production'
+            ? { sameSite: 'None' }
+            : {}),
+          path: '/'
         })
         .status(200)
         .json({
