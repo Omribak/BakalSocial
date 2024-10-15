@@ -1,0 +1,35 @@
+.MessageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.MessageImgAndContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.MessageImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.MessageTime {
+  font-size: 12px;
+}
+
+.UserText {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.FriendText {
+  background-color: rgb(192, 192, 192, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+}

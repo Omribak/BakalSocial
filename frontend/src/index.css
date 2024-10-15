@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(240, 242, 245, 0.2);
+}
+
+p {
+  cursor: default;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  cursor: default;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

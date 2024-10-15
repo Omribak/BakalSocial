@@ -1,0 +1,63 @@
+.SideNavWrapper {
+  padding-left: 1.5rem;
+  min-width: 200px;
+  background-color: white;
+}
+
+.SideNavWrapperMobile {
+  position: fixed;
+  left: -3%;
+  top: 0%;
+  z-index: 2000;
+  background-color: white;
+  color: black;
+  padding: 4rem;
+  height: 1500px;
+}
+
+.SideNavItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.SideNavItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.FriendImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.SideNavImageIcon {
+  width: 20px;
+}
+
+.LinkTest {
+  width: fit-content;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+}
+
+.LinkTest:hover {
+  border-bottom: 2px solid rgb(61, 61, 235, 0.7);
+}
+
+.SideNavFriendsWrapper {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.SideNavFriendItem {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

@@ -1,0 +1,82 @@
+.registerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 2rem;
+  @media (max-width: 850px) {
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 0;
+  }
+}
+
+.RightSide {
+}
+
+.LeftSide {
+  padding-left: 2rem;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  @media (max-width: 600px) {
+  }
+
+  @media (max-width: 400px) {
+  }
+}
+
+.radioGroupContainer {
+  display: flex;
+}
+
+.radioButtonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.RegisterButton {
+  text-align: center;
+}
+
+.ChooseGenderText {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.DescriptionPage {
+  width: 70%;
+  text-align: center;
+}
+
+.TitlePage {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.InputAndError {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 60px;
+}
+
+.RegErrorMsg {
+  color: red;
+  font-size: 12px;
+}
+.LoaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Loader {
+}

@@ -1,0 +1,287 @@
+.HomePageContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding-top: 7rem;
+}
+
+.FeedSectionWrapper {
+  width: 60%;
+
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
+
+  @media (max-width: 660px) {
+    width: 100%;
+  }
+}
+
+.RightBarBirthdayWrapper {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.FeedSectionWrapper {
+}
+
+.RightBarBirthdayWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.FeedSectionWrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.UploadPostWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.UploadPostHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.UserProfileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.UploadPostInput {
+  width: 90%;
+}
+
+.PostOptions {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+}
+
+.PostOption {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.PostWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.FeedPostsWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  gap: 2rem;
+}
+
+.PostTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.UserProfileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.BirthdayHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.BirthdayFriendsText {
+  max-width: 60%;
+  font-size: 20px;
+}
+
+.BirthdayImage {
+  width: 95%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.OnlineFriendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.OnlineFriendIcon {
+  position: absolute;
+  left: 23px;
+  bottom: 22px;
+  color: rgb(0, 228, 0);
+}
+
+.FriendsItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.PostImageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.LikeAndCommentsSection {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0 1rem 0;
+}
+
+.NumLikes {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 14px;
+  align-items: center;
+}
+
+.NumComments {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 14px;
+  align-items: center;
+}
+
+.CommentsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.WriteCommentSection {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.WriteCommentInput {
+  width: 80%;
+  height: 100%;
+  text-indent: 1%;
+}
+
+.UserPostsWrapper {
+  padding-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.UserPost {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.PostContent {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+.PostUsernameText {
+  font-weight: 700;
+}
+
+.UploadPostIcon {
+  width: 20px;
+}
+
+.PostsLoader {
+  display: flex;
+  padding-top: 5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.UserLikedIcon {
+  color: red;
+}
+
+.OnlineFriendsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.FriendLink {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.UploadPostImageBtn {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.FollowersList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.HomePostImage {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.PostUsername {
+  @media (max-width: 400px) {
+    font-size: 14px;
+    width: 200px;
+    padding-left: 0.2rem;
+  }
+}
+
+.PostTime {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 400px) {
+    font-size: 16px; /* Optional: Adjust font size for small screens */
+  }
+}
+
+.ConnectionImg {
+  width: 15%;
+  min-width: 100px;
+  @media (max-width: 1010px) {
+    display: none;
+  }
+}
