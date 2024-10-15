@@ -86,7 +86,8 @@ exports.Login = async (req, res) => {
     res
       .cookie('token', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production'
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'None'
       })
       .status(200)
       .json({
@@ -295,7 +296,8 @@ exports.UpdateUser = async (req, res) => {
       res
         .cookie('token', newToken, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production'
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'None'
         })
         .status(200)
         .json({
