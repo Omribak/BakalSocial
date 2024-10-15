@@ -53,36 +53,34 @@ const LoginPage = () => {
   };
 
   return (
-    <PageContainer>
-      <div className="loginWrapper">
-        <div className="LeftSide">
-          <TitleAuthPage>BakalSocial</TitleAuthPage>
-          <h2 className="DescriptionPage">
-            Connect with friends , family around you on BakalSocial.
-          </h2>
-        </div>
-        <div className="RightSide">
-          <form className="loginForm" onSubmit={handleSubmit}>
-            <FormInput placeholder="Email" onChange={onChange} name="email" />
-            <FormInput
-              placeholder="Password"
-              onChange={onChange}
-              name="password"
-              type="password"
-            />
-            <div className="ButtonsWrapper">
-              <BlueButton className="LoginButton">Login</BlueButton>
-              <Link to={'/forgotPassword'} className="forgotPassword">
-                Forgot your password?
-              </Link>
-            </div>
-            <Link className="NewAccountLink" to={'/register'}>
-              Create a New Account
-            </Link>
-          </form>
-        </div>
+    <div className="loginWrapper">
+      <div className="LeftSide">
+        <TitleAuthPage>BakalSocial</TitleAuthPage>
+        <h2 className="DescriptionPage">
+          Connect with friends , family around you on BakalSocial.
+        </h2>
       </div>
-    </PageContainer>
+      <div className="RightSide">
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <FormInput placeholder="Email" onChange={onChange} name="email" />
+          <FormInput
+            placeholder="Password"
+            onChange={onChange}
+            name="password"
+            type="password"
+          />
+          <div className="ButtonsWrapper">
+            <BlueButton className="LoginButton">Login</BlueButton>
+            <Link to={'/forgotPassword'} className="forgotPassword">
+              Forgot your password?
+            </Link>
+          </div>
+          <Link className="NewAccountLink" to={'/register'}>
+            Create a New Account
+          </Link>
+        </form>
+      </div>
+    </div>
   );
 };
 
