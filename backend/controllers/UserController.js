@@ -86,8 +86,7 @@ exports.Login = async (req, res) => {
       .cookie('token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        ...(process.env.NODE_ENV === 'production' ? { sameSite: 'None' } : {}),
-        path: '/'
+        ...(process.env.NODE_ENV === 'production' ? { sameSite: 'None' } : {})
       })
       .status(200)
       .json({
@@ -105,7 +104,9 @@ exports.Login = async (req, res) => {
 exports.Logout = async (req, res) => {
   res
     .clearCookie('token', {
-      path: '/'
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      ...(process.env.NODE_ENV === 'production' ? { sameSite: 'None' } : {})
     })
     .status(200)
     .json({
@@ -302,10 +303,7 @@ exports.UpdateUser = async (req, res) => {
         .cookie('token', newToken, {
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production',
-          ...(process.env.NODE_ENV === 'production'
-            ? { sameSite: 'None' }
-            : {}),
-          path: '/'
+          ...(process.env.NODE_ENV === 'production' ? { sameSite: 'None' } : {})
         })
         .status(200)
         .json({
