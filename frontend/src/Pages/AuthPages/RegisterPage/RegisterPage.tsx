@@ -88,7 +88,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <PageContainer>
+
       <div className="registerWrapper">
         <div className="LeftSide">
           <TitleAuthPage className="TitlePage">Join BakalSocial</TitleAuthPage>
@@ -136,7 +136,7 @@ const RegisterPage = () => {
           </form>
         </div>
       </div>
-    </PageContainer>
+
   );
 };
 

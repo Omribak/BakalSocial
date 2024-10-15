@@ -60,35 +60,33 @@ const ForgotPassword = () => {
   };
 
   return (
-    <PageContainer>
-      <div className="ForgotPasswordWrapper">
-        <form className="forgotPasswordForm">
-          <h1>Recover your account</h1>
-          <p>Please enter your email to recover your account:</p>
-          <FormInput
-            {...register('email')}
-            placeholder="Your Email"
-            type="email"
-            className={errors.email ? 'inputError' : ''}
-          />
-          {errors.email && typeof errors.email.message === 'string' && (
-            <p className="errorMessage">{errors.email.message}</p>
-          )}
-          <div className="formButtons">
-            <BlueButton onClick={handleBack}>
-              <Link to="/login">Back</Link>
-            </BlueButton>
-            <GreenButton
-              className={isSubmitting ? 'FormSubmitting' : ''}
-              onClick={handleSubmit(submitForgotPassword)}
-              disabled={isSubmitting}
-            >
-              Recover
-            </GreenButton>
-          </div>
-        </form>
-      </div>
-    </PageContainer>
+    <div className="ForgotPasswordWrapper">
+      <form className="forgotPasswordForm">
+        <h1>Recover your account</h1>
+        <p>Please enter your email to recover your account:</p>
+        <FormInput
+          {...register('email')}
+          placeholder="Your Email"
+          type="email"
+          className={errors.email ? 'inputError' : ''}
+        />
+        {errors.email && typeof errors.email.message === 'string' && (
+          <p className="errorMessage">{errors.email.message}</p>
+        )}
+        <div className="formButtons">
+          <BlueButton onClick={handleBack}>
+            <Link to="/login">Back</Link>
+          </BlueButton>
+          <GreenButton
+            className={isSubmitting ? 'FormSubmitting' : ''}
+            onClick={handleSubmit(submitForgotPassword)}
+            disabled={isSubmitting}
+          >
+            Recover
+          </GreenButton>
+        </div>
+      </form>
+    </div>
   );
 };
 

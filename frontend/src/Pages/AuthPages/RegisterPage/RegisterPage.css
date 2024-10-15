@@ -1,8 +1,11 @@
 .registerWrapper {
+  background-color: #f0f2f5;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  padding-right: 2rem;
+  padding: 7rem;
+  gap: 2rem;
   @media (max-width: 850px) {
     flex-direction: column;
     gap: 1rem;

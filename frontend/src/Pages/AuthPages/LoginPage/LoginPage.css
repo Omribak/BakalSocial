@@ -68,4 +68,8 @@
 
 .DescriptionPage {
   width: 90%;
+
+  @media (max-width: 530px) {
+    min-width: 230px;
+  }
 }
