@@ -25,7 +25,7 @@ const PORT = process.env.PORT || 5000;
 const corsOptions = {
   origin:
     process.env.NODE_ENV === 'production'
-      ? 'https://bakalsocial.com'
+      ? 'https://www.bakalsocial.com'
       : 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
