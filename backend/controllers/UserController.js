@@ -84,7 +84,10 @@ exports.Login = async (req, res) => {
     console.log(decoded);
 
     res
-      .cookie('token', token, { httpOnly: true, secure: false })
+      .cookie('token', token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production'
+      })
       .status(200)
       .json({
         status: 'success',
@@ -290,7 +293,10 @@ exports.UpdateUser = async (req, res) => {
 
       // Send the new token back to the client
       res
-        .cookie('token', newToken, { httpOnly: true, secure: false })
+        .cookie('token', newToken, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production'
+        })
         .status(200)
         .json({
           status: 'success',
