@@ -8,6 +8,11 @@ const {
   sendResetSuccessEmail
 } = require('../mailtrap/utils');
 
+const resetURL =
+  process.env.NODE_ENV === 'production'
+    ? process.env.PROD_URL
+    : process.env.DEV_URL;
+
 //Register
 
 exports.Register = async (req, res) => {
@@ -195,7 +200,7 @@ exports.ForgotPassword = async (req, res) => {
     await user.save();
     await sendPasswordResetEmail(
       user.email,
-      `${process.env.DEV_URL}/reset-token/${resetToken}`
+      `${resetURL}/reset-token/${resetToken}`
     );
     res.status(200).json({
       status: 'success',
