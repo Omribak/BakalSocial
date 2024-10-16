@@ -104,7 +104,9 @@ exports.Login = async (req, res) => {
 exports.Logout = async (req, res) => {
   res
     .clearCookie('token', {
-      httpOnly: true
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      ...(process.env.NODE_ENV === 'production' ? { sameSite: 'None' } : {})
     })
     .status(200)
     .json({

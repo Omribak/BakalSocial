@@ -6,16 +6,11 @@ const {
 
 const sendPasswordResetEmail = async (email, resetURL) => {
   const recipient = [{ email }];
-  const recipients2 = [
-    {
-      email: 'omribak2@gmail.com'
-    }
-  ];
 
   try {
     const response = await mailtrapClient.send({
       from: sender,
-      to: recipients2,
+      to: recipient,
       subject: 'Reset Your Password',
       html: PASSWORD_RESET_REQUEST_TEMPLATE.replace('{resetURL}', resetURL),
       category: 'Password Reset'
